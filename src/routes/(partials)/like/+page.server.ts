@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { Actions } from './$types';
 
 let likes = 0;
 export const load: PageLoad = () => {
@@ -7,3 +7,10 @@ export const load: PageLoad = () => {
 		likes
 	};
 };
+
+export const actions = {
+	default: async (event) => {
+		console.log("Form action triggered!");
+		return { hello: 'world' }
+	},
+} satisfies Actions;

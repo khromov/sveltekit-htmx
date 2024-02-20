@@ -18,6 +18,7 @@
 		<a href="/about">About</a>
 		<a href="/contact">Contact</a>
 		<a href="/slow">Slow page</a>
+		<a href="/like">Like</a>
 	</div>
 </div>
 
