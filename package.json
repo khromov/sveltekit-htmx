@@ -13,7 +13,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"build:htmx": "shx cp ./node_modules/htmx.org/dist/htmx.min.js ./static/htmx.min.js"
+		"build:htmx": "shx cp ./node_modules/htmx.org/dist/htmx.min.js ./static/htmx.min.js && shx cp ./node_modules/htmx.org/dist/ext/loading-states.js ./static/htmx-loading-states.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",

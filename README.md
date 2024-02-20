@@ -1,18 +1,12 @@
-# create-svelte
+# SvelteKit + htmx
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This repo shows how it's possible to combine SvelteKit and htmx.
 
-## Creating a project
+With SvelteKit you get as close as possible to developing in normal HTML, while enjoying modern amenities like support for automatic scoped CSS, TypeScript and dozens of UI libraries like Melt UI and Flowbite out of the box!
 
-If you're seeing this, you've probably already done this step. Congrats!
+### How does it work?
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+We disable the SvelteKit client side rendering by setting `export const csr = false;` in the root layout. We then load htmx and use it normally. Small bundle sizes + interactivity thanks to htmx = ❤️
 
 ## Developing
 
@@ -25,6 +19,14 @@ npm run dev
 npm run dev -- --open
 ```
 
+## Previewing
+
+To preview your app.
+
+```bash
+npm run preview
+```
+
 ## Building
 
 To create a production version of your app:
@@ -32,7 +34,5 @@ To create a production version of your app:
 ```bash
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

@@ -9,3 +9,5 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 static/htmx.min.js
+static/htmx
+static/htmx-*.js
