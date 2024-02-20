@@ -11,6 +11,7 @@ export const load: PageLoad = () => {
 export const actions = {
 	default: async (event) => {
 		console.log("Form action triggered!");
+		likes++;
 		return { hello: 'world' }
 	},
 } satisfies Actions;
