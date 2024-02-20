@@ -37,9 +37,7 @@
 	}
 
 	/* https://htmx.org/extensions/loading-states/ */
-	/*
 	:global([data-loading]) {
 		display: none;
 	}
-	*/
 </style>
