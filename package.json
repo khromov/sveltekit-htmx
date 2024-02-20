@@ -3,13 +3,17 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"predev": "npm run build:htmx",
+		"prebuild": "npm run build:htmx",
+		"prepreview": "npm run build:htmx",
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "npm run build && vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"build:htmx": "shx cp ./node_modules/htmx.org/dist/htmx.min.js ./static/htmx.min.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -21,8 +25,10 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
+		"htmx.org": "^1.9.10",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
+		"shx": "^0.3.4",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"tslib": "^2.4.1",
